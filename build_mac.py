@@ -9,7 +9,7 @@ import sys
 
 # Check if running on macOS
 if sys.platform != 'darwin':
-    print("⚠️  WARNING: This script should be run on macOS!")
+    print("WARNING: This script should be run on macOS!")
     print("   You are currently on:", sys.platform)
     response = input("\nDo you want to continue anyway? (y/n): ")
     if response.lower() != 'y':
@@ -29,13 +29,13 @@ PyInstaller.__main__.run([
 ])
 
 print("\n" + "="*50)
-print("✅ BUILD COMPLETE!")
+print("BUILD COMPLETE!")
 print("="*50)
-print(f"\n📁 Your application is located at:")
+print(f"\nYour application is located at:")
 print(f"   {os.path.abspath('dist/SlideAudioGenerator.app')}")
-print("\n📦 You can share this .app bundle with Mac users!")
-print("\n⚠️  Note: The .app will be large (~50-100 MB)")
+print("\nYou can share this .app bundle with Mac users!")
+print("\nNote: The .app will be large (~50-100 MB)")
 print("   because it includes Python and all dependencies.")
-print("\n💡 To distribute, you may need to code sign it:")
+print("\nTo distribute, you may need to code sign it:")
 print("   See: https://developer.apple.com/support/code-signing/")
 print("\n" + "="*50)
